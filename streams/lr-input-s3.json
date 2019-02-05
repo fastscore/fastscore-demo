@@ -1,1 +1,1 @@
-{"Transport": {"Region": "us-east-2", "Bucket": "fastscore-1-9-demo", "AccessKeyID": "AKIAIVWQWLAZR3RD2KVQ", "SecretAccessKey": "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", "ObjectKey": "tests3.json", "Type": "S3"}, "Encoding": "JSON"}
+{"Transport": {"Region": "us-east-2", "Bucket": "fastscore-1-9-demo", "AccessKeyID": "AKIAIVWQWLAZR3RD2KVQ", "SecretAccessKey": "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", "ObjectKey": "close_prices.jsons", "Type": "S3"}, "Encoding": "JSON"}
