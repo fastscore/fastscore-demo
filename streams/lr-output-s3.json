@@ -1,1 +1,1 @@
-{"Rotate": {"MaxSize": "7M"}, "Transport": {"Region": "us-east-2", "Bucket": "fastscore-1-9-demo", "AccessKeyID": "AKIAIVWQWLAZR3RD2KVQ", "SecretAccessKey": "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", "ObjectKey": "lr-predictions.jsons", "Type": "S3"}, "Encoding": "JSON"}
+{"Rotate": {"MaxSize": "5k"}, "Transport": {"Region": "us-east-2", "Bucket": "fastscore-1-9-demo", "AccessKeyID": "AKIAIVWQWLAZR3RD2KVQ", "SecretAccessKey": "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", "ObjectKey": "lr-predictions.jsons", "Type": "S3"}, "Encoding": "JSON"}
