@@ -16,7 +16,6 @@ def begin():
 
 def action(x):
     time.sleep(3)
-    print (x)
     global window, window_size
     x = x['Close']
     window = window[1-window_size:] + [x]
