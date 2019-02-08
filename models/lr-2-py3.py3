@@ -13,7 +13,7 @@ def begin():
     global window, window_size
     window = []
     window_size = 15
-    with open('lr_pickle1.pkl', 'rb') as f:
+    with open('lr_pickle2.pkl', 'rb') as f:
         lr = pickle.load(f)
 
 def action(x):
