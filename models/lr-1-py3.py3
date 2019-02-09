@@ -1,4 +1,5 @@
 # fastscore.schema.0: close_price
+# glong was here
 
 import numpy as np
 import pickle
