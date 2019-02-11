@@ -1,1 +1,5 @@
-{"Transport": {"Type": "Discard"}}
+{
+  "Transport": {
+    "Type": "Discard"
+  }
+}
