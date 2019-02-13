@@ -5,6 +5,7 @@
 import numpy as np
 import pickle
 from sklearn.linear_model import LinearRegression
+import sys
 
 
 def begin():
@@ -26,5 +27,5 @@ def action(x):
     else:
         score = dict(EV_ID = str(x['EV_ID']), MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'BAR')
     print(score)
-
+    sys.stdout.flush()
     yield score
