@@ -22,8 +22,8 @@ def begin():
 def action(x):
     sum_of_words = sum([x[w] for w in WORD_LIST])
     if sum_of_words % 2 == 0:
-        score = dict(EV_ID = x['EV_ID'], MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'FOO')
+        score = dict(EV_ID = str(x['EV_ID']), MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'FOO')
     else:
-        score = dict(EV_ID = x['EV_ID'], MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'BAR')
+        score = dict(EV_ID = str(x['EV_ID']), MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'BAR')
 
     yield score
