@@ -25,5 +25,6 @@ def action(x):
         score = dict(EV_ID = str(x['EV_ID']), MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'FOO')
     else:
         score = dict(EV_ID = str(x['EV_ID']), MULTI_CTGY_PRED = sum_of_words, TRAN_CTGY_CD_PRED = 'BAR')
+    print(score)
 
     yield score
