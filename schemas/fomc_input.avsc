@@ -1,0 +1,1 @@
+{"fields": [{"type": "string", "name": "date"}, {"type": {"items": "string", "type": "array"}, "name": "text"}], "type": "record", "name": "minutes"}
