@@ -15,7 +15,7 @@ def action(x):
 	lr = LinearRegression()
 	lr = lr.fit(X1, y1)
 	with open('lr_pickle3.pkl', 'wb') as f:
-	pickle.dump(lr, f)
+		pickle.dump(lr, f)
 
 def make_data(inputs, window_size = 15, size = 500):
 	X, y = np.vstack( inputs[i:i+window_size] for i in range(0, size) ), np.vstack( inputs[i+window_size: i + window_size + 1] for i in range(0, size) )
