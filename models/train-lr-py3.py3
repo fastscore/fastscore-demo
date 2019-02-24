@@ -14,7 +14,7 @@ def action(x):
 	X1, y1 = make_data(close_prices[0:1000])
 	lr = LinearRegression()
 	lr = lr.fit(X1, y1)
-	with open('lr_pickle3.pkl', 'wb') as f:
+	with open('/data/lr_pickle3.pkl', 'wb') as f:
 		pickle.dump(lr, f)
 
 def make_data(inputs, window_size = 15, size = 500):
