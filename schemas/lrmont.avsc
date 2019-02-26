@@ -1,0 +1,1 @@
+{"fields": [{"type": "double", "name": "Date"}, {"type": "double", "name": "Close"}, {"type": "double", "name": "MSE"}], "type": "record", "name": "lrmont"}
