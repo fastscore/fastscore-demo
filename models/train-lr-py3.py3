@@ -1,4 +1,3 @@
-
 import pandas as pd
 import json
 import numpy as np
@@ -16,11 +15,6 @@ def action(x):
 	lr = lr.fit(X1, y1)
 	with open('/data/lr_pickle3.pkl', 'wb') as f:
 		pickle.dump(lr, f)
-	
-	mm = c.lookup('model-manage')
-	eng = c.lookup('engine')
-	att = Attachment
-	att.upload(	
 	
 def make_data(inputs, window_size = 15, size = 500):
 	X, y = np.vstack( inputs[i:i+window_size] for i in range(0, size) ), np.vstack( inputs[i+window_size: i + window_size + 1] for i in range(0, size) )
