@@ -19,7 +19,7 @@ def gen_point(name, actual, prediction, MSE, timestamp):
         "measurement": name,
         "time": timestamp,
         "fields": {
-            "Predicted": prediction,
+            "Predicted": predicted,
             "Actual": actual,
             "MSE": MSE,
             "timestamp": timestamp
