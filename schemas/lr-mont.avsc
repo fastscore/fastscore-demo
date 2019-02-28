@@ -1,0 +1,1 @@
+{"fields": [{"type": "string", "name": "name"}, {"type": "double", "name": "value"}, {"type": "double", "name": "measure"}], "type": "record", "name": "tagged_double"}
