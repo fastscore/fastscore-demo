@@ -17,7 +17,7 @@ def begin():
 def action(x):
     global window, window_size
     x = x['Close']
-    actual = x*1.1
+    actual = x*(1.1)
     window = window[1-window_size:] + [x]
     if len(window) < window_size:
         yield {"name": "price", "value":x, "actual":x}
