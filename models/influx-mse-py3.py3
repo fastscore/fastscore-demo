@@ -26,8 +26,8 @@ def gen_point(name, actual, prediction, MSE, timestamp):
         "measurement": name,
         "time": timestamp,
         "fields": {
-            "Predicted": prediction,
-            "Actual": actual,
+            "predicted": value,
+            "actual": actual,
             "MSE": MSE,
             "timestamp": timestamp
         }
@@ -44,8 +44,8 @@ def action(datum):
     global BATCH
     
     name = datum['name']
-    actual = datum['actual']
-    predicted = datum['predicted']
+    actual = datum['monitor']
+    predicted = datum['value']
 
     timestamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
 
