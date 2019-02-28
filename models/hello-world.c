@@ -7,4 +7,4 @@ void action(fastscore_value_t v, int slot, int seqn)
 	printf("Hello world\n");
 }
 
-void end()
+void end1(){}
