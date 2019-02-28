@@ -20,9 +20,9 @@ def action(x):
     actual = x*(1.1)
     window = window[1-window_size:] + [x]
     if len(window) < window_size:
-        yield {"name": "price", "value":x, "actual":x}
+        yield {"name": "price", "value":x, "monitor":actual}
     else:
         X = np.array([window])
         y = lr.predict(X)
-        yield {"name":"price", "value": y[0,0],"actual":actual}
+        yield {"name":"price", "value": y[0,0],"monitor":actual}
 
