@@ -14,15 +14,15 @@ void action(fastscore_value_t v, int slot, int seqn)
 	float b = 0.0f;
 	for (int i = 0; i < n; i++)
 	{
-		b += 1 / (i * i);
+		b += 1.0f / (float)(i * i);
 	}
 
-	b *= 6;
+	b *= 6.0f;
 	b = sqrt(b);
 	
 	fastscore_value_t o;
 	o.fmt = FASTSCORE_FMT_JSON;
-	o.js = json_integer(b);
+	o.js = json_real(b);
 
 	fastscore_emit(o, 1);
 }
