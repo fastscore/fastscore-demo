@@ -12,10 +12,12 @@ void action(fastscore_value_t v, int slot, int seqn)
 	int n = json_integer_value(v.js);
 
 	float b = 0.0f;
-	
-	for (int i = 0; i < n; i++)
+	int i;	
+
+	for (i = 0; i < n; i++)
 	{
-		b += 1.0f / (float)(i * i);
+		// b += 1.0f / (float)(i * i);
+		b = (float)i;
 	}
 
 	// b *= 6.0f;
