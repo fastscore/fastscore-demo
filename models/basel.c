@@ -14,10 +14,10 @@ void action(fastscore_value_t v, int slot, int seqn)
 	float b = 0.0f;
 	int i;	
 
-	for (i = 0; i < n; i++)
+	for (i = 1; i < n; i++)
 	{
-		// b += 1.0f / (float)(i * i);
-		b = (float)i;
+		b += 1.0f / (float)(i * i);
+		// b = (float)i;
 	}
 
 	// b *= 6.0f;
