@@ -17,11 +17,10 @@ void action(fastscore_value_t v, int slot, int seqn)
 	for (i = 1; i < n; i++)
 	{
 		b += 1.0f / (float)(i * i);
-		// b = (float)i;
 	}
 
-	// b *= 6.0f;
-	// b = sqrt(b);
+	b *= 6.0f;
+	b = sqrt(b);
 	
 	fastscore_value_t o;
 	o.fmt = FASTSCORE_FMT_JSON;
