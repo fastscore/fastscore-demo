@@ -22,7 +22,7 @@ void action(fastscore_value_t v, int slot, int seqn)
 	
 	fastscore_value_t o;
 	o.fmt = FASTSCORE_FMT_JSON;
-	o.json = json_integer(b);
+	o.js = json_integer(b);
 
 	fastscore_emit(o, 1);
 }
