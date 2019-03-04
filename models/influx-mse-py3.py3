@@ -44,7 +44,7 @@ def action(datum):
     N = 1
     MSE = 0
     name = datum['name']
-    actual = datum['actual']
+    actual = datum['monitor']
     predicted = datum['predicted']
     timestamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
 
