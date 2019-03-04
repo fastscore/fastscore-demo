@@ -12,8 +12,7 @@ from time import sleep
 
 
 def begin():
-    global influx, FLUSH_DELTA, BATCH_SIZE, BATCH, N, MSE, value_list
-    mean, std_dev,
+    global influx, FLUSH_DELTA, BATCH_SIZE, BATCH, N, MSE, value_list, std_dev,
     FLUSH_DELTA = 0.01
     BATCH_SIZE = 10
     BATCH = []
