@@ -41,18 +41,20 @@ def MSE(actual,predicted):
 
 def action(datum):
     global BATCH
-    
+    N = 1
+    MSE = 0
     name = datum['name']
-    actual = datum['monitor']
-    predicted = datum['value']
-
+    actual = datum['actual']
+    predicted = datum['predicted']
     timestamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
 
-    MSE = MSE(actual, predicted)
+    MSE = (1/N)*(N*MSE+(predicted - actual) ** 2)
+    N = N + 1
+
     BATCH.append(gen_point(name, actual, predicted, MSE, timestamp))
 
     if BATCH_SIZE == len(BATCH):
-        #influx.write_points(BATCH)
+        influx.write_points(BATCH)
         print(BATCH)
         BATCH = []
         sleep(FLUSH_DELTA)
