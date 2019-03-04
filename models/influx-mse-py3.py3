@@ -21,12 +21,12 @@ def begin():
     
     influx = InfluxDBClient('influxdb', '8086', 'admin', 'scorefast', 'fastscore')
 
-def gen_point(name, actual, prediction, MSE, timestamp):
+def gen_point(name, actual, predicted, MSE, timestamp):
     point = {
         "measurement": name,
         "time": timestamp,
         "fields": {
-            "predicted": value,
+            "predicted": predicted,
             "actual": actual,
             "MSE": MSE,
             "timestamp": timestamp
@@ -50,7 +50,7 @@ def action(datum):
     timestamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
 
     MSE = MSE(actual, predicted)
-    BATCH.append(gen_point(name, actual, prediction, MSE, timestamp))
+    BATCH.append(gen_point(name, actual, predicted, MSE, timestamp))
 
     if BATCH_SIZE == len(BATCH):
         #influx.write_points(BATCH)
