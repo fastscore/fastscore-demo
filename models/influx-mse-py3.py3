@@ -31,6 +31,7 @@ def gen_point(name, actual, predicted, MSE, timestamp):
             "timestamp": timestamp
         }
     }
+    print(point)
     return point
 
 def MSE(actual,predicted):
