@@ -24,5 +24,5 @@ def action(x):
     else:
         X = np.array([window])
         y = lr.predict(X)
-        yield {"name":"price", "value": y[0,0],"monitor":actual}
+        yield {"name":"price", "predicted": y[0,0],"actual":actual}
 
