@@ -12,7 +12,7 @@ def begin():
     FLUSH_DELTA = 0.05
     BATCH_SIZE = 10
     BATCH = []
-    influx = InfluxDBClient('influx', '8086', 'admin', 'scorefast', 'fastscore')
+    influx = InfluxDBClient('influxdb', '8086', 'admin', 'scorefast', 'fastscore')
 
 def gen_point(name, actual, prediction, MSE, timestamp):
     point = {
