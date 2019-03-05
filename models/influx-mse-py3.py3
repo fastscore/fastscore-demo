@@ -40,6 +40,7 @@ def action(datum):
     N = N + 1
 
     BATCH.append(gen_point(name, actual, predicted, MSE, timestamp))
+    print(BATCH)
     if BATCH_SIZE == len(BATCH):
         influx.write_points(BATCH)
         print(BATCH)
