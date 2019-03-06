@@ -43,7 +43,6 @@ def action(datum):
     print(BATCH)
     if BATCH_SIZE == len(BATCH):
         influx.write_points(BATCH)
-        print(BATCH)
         BATCH = []
         sleep(FLUSH_DELTA)
     yield {"name": "score", "predicted": predicted,"actual": actual, "MSE": MSE}
