@@ -1,0 +1,1 @@
+{"type": "record", "name": "output", "fields": [{"type": "string", "name": "EV_ID"}, {"type": "double", "name": "MULTI_CTGY_PRED"}]}
