@@ -1,1 +1,1 @@
-{"type": "record", "name": "example_input", "fields": [{"type": "double", "name": "feat_1"}, {"type": "double", "name": "feat_2"}, {"type": "string", "name": "id"}, {"type": "string", "name": "word"}]}
+{"type": "record", "name": "example_input", "fields": [{"type": "double", "name": "feat_1"}, {"type": "double", "name": "feat_2"}, {"type": "int", "name": "id"}, {"type": "string", "name": "word"}]}
