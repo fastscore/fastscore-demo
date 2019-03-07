@@ -6,6 +6,7 @@ import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import _encoders
 
 
 
