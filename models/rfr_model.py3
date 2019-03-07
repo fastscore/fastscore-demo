@@ -6,7 +6,7 @@ import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.preprocessing import _encoders
+
 
 
 
@@ -19,7 +19,6 @@ def begin():
 
 def action(x):
     #In this example, FastScore will parse x as a Python dictionary since x is a single record.
-    #print(x)
     ID = x['id']
     word = x['word']
     one_hot = enc.transform(np.array(word).reshape(-1,1)).toarray()[0].reshape(1,-1)
