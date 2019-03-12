@@ -1,28 +1,48 @@
-# fastscore.schema.0: close_price
+# fastscore.input: lr-mont
+# fastscore.module-attached: influxdb
 
-import numpy as np
-import pickle
-import time
-from sklearn.linear_model import LinearRegression
+from influxdb import InfluxDBClient
+from datetime import datetime
+from time import sleep
+
 
 
 def begin():
-    global lr
-    global window, window_size
-    window = []
-    window_size = 15
-    with open('lr_pickle1.pkl', 'rb') as f:
-        lr = pickle.load(f)
+    global influx, FLUSH_DELTA, BATCH_SIZE, BATCH, N, MSE
+    FLUSH_DELTA = 0.05
+    BATCH_SIZE = 10
+    BATCH = []
+    influx = InfluxDBClient('influx', '8086', 'admin', 'scorefast', 'fastscore')
 
-def action(x):
-    time.sleep(3)
-    global window, window_size
-    x = x['Close']
-    
-    window = window[1-window_size:] + [x]
-    if len(window) < window_size:
-        yield {"name": "price", "value":x}
-    else:
-        X = np.array([window])
-        y = lr.predict(X)
-        yield {"name":"price", "predicted": y[0,0],"actual":actual}
+def gen_point(name, actual, prediction, MSE, timestamp):
+    point = {
+        "measurement": name,
+        "time": timestamp,
+        "fields": {
+            "Predicted": prediction,
+            "Actual": actual,
+            "MSE": MSE,
+            "timestamp": timestamp
+        }
+    }
+    return point
+
+def action(datum):
+    global BATCH
+    N = 1
+    MSE = 0
+    name = datum['name']
+    actual = datum['actual']
+    predicted = datum['predicted']
+    timestamp = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
+
+    MSE = (1/N)*(N*MSE+(predicted - actual) ** 2)
+    N = N + 1
+
+    BATCH.append(gen_point(name, actual, predicted, MSE, timestamp))
+    if BATCH_SIZE == len(BATCH):
+        influx.write_points(BATCH)
+        print(BATCH)
+        BATCH = []
+        sleep(FLUSH_DELTA)
+    yield {"name": "score", "predicted": predicted,"actual": actual, "MSE": MSE}
