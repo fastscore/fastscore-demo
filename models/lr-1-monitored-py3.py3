@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 import time
 from sklearn.linear_model import LinearRegression
-from random import uniform
+
 
 def begin():
     global lr
@@ -17,12 +17,12 @@ def begin():
 def action(x):
     global window, window_size
     x = x['Close']
-    actual = x*uniform(1, 1.5)
+    actual = x*(1.1)
     window = window[1-window_size:] + [x]
     if len(window) < window_size:
-        yield {"name": "price", "predicted":x, "actual":actual}
+        yield {"name": "price", "value":x, "monitor":actual}
     else:
         X = np.array([window])
         y = lr.predict(X)
-        yield {"name":"price", "predicted": y[0,0],"actual":actual}
+        yield {"name":"price", "value": y[0,0],"monitor":actual}
 
