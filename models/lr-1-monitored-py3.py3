@@ -17,12 +17,12 @@ def begin():
 def action(x):
     global window, window_size
     x = x['Close']
-    actual = x*uniform(1, 1.5)
+    #actual = x*uniform(1, 1.5)
     window = window[1-window_size:] + [x]
     if len(window) < window_size:
-        yield {"name": "price", "predicted":x, "actual":actual}
+        yield {"name": "price", "score":x}
     else:
         X = np.array([window])
         y = lr.predict(X)
-        yield {"name":"price", "predicted": y[0,0],"actual":actual}
+        yield {"name":"price", "score": y[0,0]}
 
