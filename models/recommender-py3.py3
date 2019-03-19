@@ -1,6 +1,8 @@
 # fastscore.schema.0: input
 # fastscore.schema.1: output
 
+# hello world
+
 # fastscore.module-attached: autorecommender
 from autorecommender.models.autoencoder import load_model
 from autorecommender.data import Dataset, ratings_matrix_to_list
