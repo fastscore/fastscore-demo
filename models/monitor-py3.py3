@@ -13,7 +13,7 @@ def action(x):
     global calcbundle
     yield (1, x)
 
-    calcbundle.update(x)
+    calcbundle.update(x=x)
 
     values = calcbundle.values
     mean, std = values["Moments"]
