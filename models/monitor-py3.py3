@@ -13,6 +13,8 @@ def action(x):
     global calcbundle
     yield (1, x)
 
+    calcbundle.update(x)
+
     values = calcbundle.values
     mean, std = values["Moments"]
     maxi = values["Maximum"]
