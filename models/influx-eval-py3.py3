@@ -24,7 +24,7 @@ def gen_point(name,datum,timestamp):
             "Mean": datum['Mean'],
             "Variance": datum['Variance'],
             "EWMA": datum['EWMA'],
-            "EWMV": datum['EWMV'],
+            #"EWMV": datum['EWMV'],
             "Elapsed Time": datum['Elapsed Time'],
             "Number of Records": datum['Number of Records']
         }
