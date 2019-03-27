@@ -1,4 +1,4 @@
-# fastscore.schema.0: citi_output
+# fastscore.slot.0: in-use 
 # fastscore.slot.1: unused
 # fastscore.module-attached: streamstats
 # fastscore.module-attached: influxdb
