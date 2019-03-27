@@ -17,7 +17,7 @@ def vals_to_dict(sb):
 	ewma, ewmv = vals["EWM"]
 	vals["EWMA"] = ewma
 	vals["EWMV"] = ewmv
-	del vals["EWM"]
+        del vals["EWM"]
 	return {**vals}
     
 
@@ -52,7 +52,7 @@ def action(predict):
     
 	
 	report = vals_to_dict(bundle)
-    
+        report['score'] = prediction
 	
 	report['Elapsed Time'] = float(elapsed_time)
 	report["Number of Records"] = float(num_of_recs)
