@@ -89,7 +89,6 @@ def action(predict):
 	BATCH.append(gen_point(name, report, timestamp))
 	if BATCH_SIZE == len(BATCH):
 		influx.write_points(BATCH)
-		print(BATCH)
 		sys.stdout.flush()
 		BATCH = []
 		sleep(FLUSH_DELTA)
