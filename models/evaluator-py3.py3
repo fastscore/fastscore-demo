@@ -18,7 +18,7 @@ def vals_to_dict(sb):
 	del vals["Moments"]
 	ewma, ewmv = vals["EWM"]
 	vals["EWMA"] = ewma
-	#vals["EWMV"] = ewmv
+	vals["EWMV"] = ewmv
 	del vals["EWM"]
 	return {**vals}
     
@@ -32,7 +32,7 @@ def gen_point(name,datum,timestamp):
             "Mean": datum['Mean'],
             "Variance": datum['Variance'],
             "EWMA": datum['EWMA'],
-            "EWMV": datum['EWMV'],
+            #"EWMV": datum['EWMV'],
             "Elapsed Time": datum['Elapsed Time'],
             "Number of Records": datum['Number of Records']
         }
