@@ -33,6 +33,7 @@ def gen_point(name,datum,timestamp):
             "Variance": datum['Variance'],
             "EWMA": datum['EWMA'],
             #"EWMV": datum['EWMV'],
+            "prediction": datum['prediction'],
             "Elapsed Time": datum['Elapsed Time'],
             "Number of Records": datum['Number of Records']
         }
