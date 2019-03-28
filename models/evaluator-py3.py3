@@ -18,7 +18,7 @@ def vals_to_dict(sb):
 	del vals["Moments"]
 	ewma, ewmv = vals["EWM"]
 	vals["EWMA"] = ewma
-	vals["EWMV"] = ewmv
+	#vals["EWMV"] = ewmv
 	del vals["EWM"]
 	return {**vals}
     
