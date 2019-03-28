@@ -87,7 +87,7 @@ def action(predict):
 	
 	report['Elapsed Time'] = float(elapsed_time)
 	report["Number of Records"] = float(num_of_recs)
-	report["prediction"] = prediction
+    report["prediction"] = prediction
     
 	BATCH.append(gen_point(name, report, timestamp))
 	if BATCH_SIZE == len(BATCH):
@@ -95,4 +95,3 @@ def action(predict):
 		sys.stdout.flush()
 		BATCH = []
 		sleep(FLUSH_DELTA)
-
