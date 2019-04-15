@@ -1,0 +1,1 @@
+{"Version":"1.2","Transport":{"Path":"/data/close_prices.jsons","Type":"file"},"Envelope":"delimited","Encoding":"json"}
