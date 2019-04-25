@@ -1,7 +1,7 @@
 # fastscore.action: unused
 
 # fastscore.schema.0: close_price
-# fastscore.schema.1: tagged_double
+# fastscore.schema.1: lr-mont 
 
 
 import numpy as np
