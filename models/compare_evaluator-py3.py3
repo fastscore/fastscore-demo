@@ -114,7 +114,7 @@ def do_update(top):
 
 	report2 = vals_to_dict(bundle2)
 	report2['Elapsed Time'] = float(elapsed_time)
-	report2['Numer of Records'] = float(num_of_recs)
+	report2['Number of Records'] = float(num_of_recs)
 	report2['prediction'] = x2
 
 	reportdiff = vals_to_dict(bundlediff)
