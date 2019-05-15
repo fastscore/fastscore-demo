@@ -1,0 +1,19 @@
+# fastscore.schema.0: double
+# fastscore.schema.1: double
+
+import numpy as np
+
+def begin():
+    global window, window_size, coeffs
+    window = []
+    window_size = 15
+    coeffs = np.ones(15)/15 # average
+
+def action(x):
+    global window, window_size, coeffs
+
+    window = window[1 - window_size:] + [x]
+    if len(window) < window_size:
+        yield x
+    else:
+        yield coeffs.dot(window).item()
