@@ -102,9 +102,9 @@ def do_update(top):
 	current_time = dt.datetime.now().timestamp()
 	elapsed_time = current_time - start_time
 
-	bundle1.update(x1)
-	bundle2.update(x2)
-	bundlediff.update(x1 - x2)
+	bundle1.update(x=x1)
+	bundle2.update(x=x2)
+	bundlediff.update(x=x1 - x2)
 
 
 	report1 = vals_to_dict(bundle1)
