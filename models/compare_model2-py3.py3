@@ -16,4 +16,4 @@ def action(x):
     if len(window) < window_size:
         yield x
     else:
-        yield coeffs.dot(window).item()
+        yield (coeffs + np.random.rand(15)/5).dot(window).item()
