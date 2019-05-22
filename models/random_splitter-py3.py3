@@ -1,12 +1,1 @@
-# fastscore.schema.0: double
-# fastscore.schema.1: double
-# fastscore.schema.3: double
-
-import numpy as np
-
-def action(datum):
-    x = np.random.rand()
-    if x > 0.2:
-        yield (1, datum)
-    else:
-        yield (3, datum)
+"# fastscore.schema.0: double\n# fastscore.schema.1: double\n# fastscore.schema.3: double\n\nimport numpy as np\n\ndef action(datum):\n    x = np.random.rand()\n    if x > 0.2:\n        yield (1, datum)\n    else:\n        yield (3, datum)\n"
