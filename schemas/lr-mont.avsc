@@ -1,0 +1,1 @@
+{"fields": [{"type": "string", "name": "name"}, {"type": "double", "name": "score"}], "type": "record", "name": "tagged_double"}
