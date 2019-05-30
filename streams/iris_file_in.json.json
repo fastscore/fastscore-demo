@@ -1,0 +1,1 @@
+{"Description":"A file stream containing example doubles","Encoding":"json","Envelope":"delimited","Transport":{"Path":"/tmp/iris_test_input.jsons","Type":"file"}}
