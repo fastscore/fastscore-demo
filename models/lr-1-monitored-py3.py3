@@ -21,7 +21,7 @@ def action(x):
     actual = x*uniform(1, 1.5)
     window = window[1-window_size:] + [x]
     if len(window) < window_size:
-        yield {"name": "price", "score":x}
+        yield {"name":"price", "score": y[0,0], "actual":actual}
     else:
         X = np.array([window])
         y = lr.predict(X)
