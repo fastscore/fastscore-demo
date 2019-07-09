@@ -1,5 +1,6 @@
 # fastscore.schema.0: close_price
 # fastscore.slot.1: in-use
+
 import numpy as np
 import pickle
 import time
