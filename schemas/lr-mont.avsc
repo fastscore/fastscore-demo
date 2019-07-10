@@ -1,1 +1,1 @@
-{"fields": [{"type": "string", "name": "name"}, {"type": "double", "name": "score"}], "type": "record", "name": "tagged_double"}
+{"fields":[{"name":"name","type":"string"},{"name":"score","type":"double"}],"name":"tagged_double","type":"record"}
