@@ -1,1 +1,1 @@
-{"Encoding":"json","Transport":{"BootstrapServers":["kafka:9092"],"Topic":"inter-engine","Type":"kafka"}}
+{"Envelope": null, "Transport": {"Topic": "inter-engine", "BootstrapServers": ["kafka:9092"], "Type": "kafka"}, "Encoding": "json"}
