@@ -1,1 +1,1 @@
-{"Encoding":"json","Transport":{"BootstrapServers":["kafka:9092"],"Topic":"iris-output","Type":"kafka"}}
+{"Envelope": null, "Transport": {"Topic": "iris-output", "BootstrapServers": ["kafka:9092"], "Type": "kafka"}, "Encoding": "json"}
