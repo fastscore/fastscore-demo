@@ -1,1 +1,1 @@
-{"fields": [{"name": "Date", "type": "double"}, {"name": "Close", "type": "double"}, {"name": "Actual", "type": "double"}], "name": "recabc32596", "type": "record"}
+{"fields":[{"name":"Date","type":"double"},{"name":"Close","type":"double"}],"name":"close_price","type":"record"}
