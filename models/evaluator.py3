@@ -1,4 +1,4 @@
-# fastscore.schema.0: lr-mont 
+	# fastscore.schema.0: lr-mont 
 # fastscore.slot.1: unused
 # fastscore.module-attached: streamstats
 # fastscore.module-attached: influxdb

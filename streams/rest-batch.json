@@ -1,0 +1,7 @@
+{
+    "Transport": {
+        "Type": "rest"
+    },
+    "Encoding":"JSON",
+    "Batching":"explicit"
+}

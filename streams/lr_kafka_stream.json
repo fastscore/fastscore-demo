@@ -1,1 +1,12 @@
-{"Envelope": null, "Transport": {"Topic": "influx-mux", "BootstrapServers": ["kafka:9092"], "Type": "kafka"}, "Encoding": "json"}
+{
+  "Envelope": null,
+  "Transport": {
+    "Topic": "influx-mux",
+    "BootstrapServers": [
+      "kafka:9092"
+    ],
+    "Type": "kafka"
+  },
+  "Encoding": "json"
+}
+

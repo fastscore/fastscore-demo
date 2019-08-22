@@ -1,0 +1,12 @@
+{
+  "Envelope": null,
+  "Transport": {
+    "Topic": "iris-output",
+    "BootstrapServers": [
+      "kafka:9092"
+    ],
+    "Type": "kafka"
+  },
+  "Encoding": "json"
+}
+

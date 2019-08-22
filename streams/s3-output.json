@@ -1,0 +1,11 @@
+{
+ "Encoding": "JSON",
+  "Transport": {
+    "Type": "S3",
+    "Bucket": "iris-data-bucket",
+    "ObjectKey": "iris_predictions.jsons",
+    "AccessKeyID": "",
+    "SecretAccessKey": "",
+    "Region": "us-east-2"
+  }
+}

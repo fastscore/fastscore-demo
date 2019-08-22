@@ -1,0 +1,12 @@
+{
+  "Version": "1.2",
+  "Envelope": "delimited",
+  "Loop": true,
+  "Transport": {
+    "Path": "/tmp/hp_file_input.jsons",
+    "Type": "file"
+  },
+  "Encoding": "json"
+}
+
+

@@ -1,1 +1,9 @@
-{"Transport":{"Topic":"output","BootstrapServers":["fastscore:9092"],"Type":"kafka"},"Encoding":"json"}
+{
+  "Transport": {
+    "Type": "kafka",
+    "BootstrapServers": ["kafka:9092"],
+    "Topic": "output"
+  },
+  "Envelope": null,
+  "Encoding": "json"
+}

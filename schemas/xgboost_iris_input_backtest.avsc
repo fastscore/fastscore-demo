@@ -1,0 +1,12 @@
+{
+	"type":"record",
+	"name":"xgboost_input",
+	"fields":[
+		{"name":"petal_length", "type":"float"},
+		{"name":"petal_width", "type":"float"},
+		{"name":"sepal_length", "type":"float"},
+		{"name":"sepal_width", "type":"float"},
+		{"name":"target", "type":"float"}
+	]
+	
+}

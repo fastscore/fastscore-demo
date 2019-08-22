@@ -1,0 +1,18 @@
+{
+    "fields": [
+        {
+            "name": "Date",
+            "type": "double"
+        },
+        {
+            "name": "Close",
+            "type": "double"
+        },
+        {
+            "name": "Actual",
+            "type": "double"
+        }
+    ],
+    "name": "recabc32596",
+    "type": "record"
+}

@@ -1,1 +1,4 @@
-{"Transport": "REST", "Encoding": "json"}
+{
+  "Transport": "REST",
+  "Encoding": "json"
+}

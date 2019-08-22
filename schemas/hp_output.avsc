@@ -1,0 +1,7 @@
+{
+    "type":"record",
+    "name":"hp_out",
+    "fields":[
+        {"type": "double", "name": "SalePrice"}
+    ]
+}
