@@ -1,5 +1,5 @@
 # fastscore.schema.0: close_price
-# fastscore.schema.1: tagged-double
+# fastscore.schema.1: tagged_double
 
 
 import numpy as np
