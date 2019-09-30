@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy
 import scipy
+import sys as sys
+
 from sklearn.metrics import confusion_matrix, f1_score, roc_curve, auc
 
 def begin():
@@ -34,6 +36,8 @@ def action(datum):
     score = sum([datum[feat] * model_coefs[feat] for feat in features])
     score += model_coefs['intercept']
     pred_proba = scipy.special.expit(score)
+    sys.stdout.flush()
+    print("Predicted probability: " + str(pred_proba));
     if pred_proba > thresh: yield "Default"
     else: yield "Pay Off"
 
