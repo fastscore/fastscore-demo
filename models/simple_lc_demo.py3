@@ -37,7 +37,7 @@ def action(datum):
     score += model_coefs['intercept']
     pred_proba = scipy.special.expit(score)
     sys.stdout.flush()
-    print("Predicted probability: " + str(pred_proba));
+    print("Predicted probability of loan default: " + str(pred_proba));
     if pred_proba > thresh: yield "Default"
     else: yield "Pay Off"
 
