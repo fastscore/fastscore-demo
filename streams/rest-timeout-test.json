@@ -1,0 +1,7 @@
+{
+    "Encoding": "json",
+    "Transport": {
+	"Type": "REST",
+        "Timeout": "20000" 
+    }
+}
