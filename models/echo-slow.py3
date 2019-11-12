@@ -1,4 +1,4 @@
-import sys as sys
+import sys
 import time
 
 def action(datum):
