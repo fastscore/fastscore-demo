@@ -6,6 +6,7 @@ from influxdb import InfluxDBClient
 from datetime import datetime
 from time import sleep
 
+# modelop.init
 def begin():
     global influx, FLUSH_DELTA, BATCH_SIZE, BATCH
     FLUSH_DELTA = 0.01
@@ -24,6 +25,7 @@ def gen_point(name, value, timestamp):
     }
     return point
 
+# modelop.score
 def action(datum):
     global BATCH
     name = datum['name']

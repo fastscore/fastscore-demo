@@ -51,11 +51,13 @@ def pad_sparse_matrix(sp_mat, length, width):
     return padded
 
 
+# modelop.init
 def begin():
     global lasso_model_artifacts 
     lasso_model_artifacts = pickle.load(open('/fastscore/lasso_model_artifacts.pkl', 'rb'))
     pass
 
+# modelop.score
 def action(x):
     lasso_model = lasso_model_artifacts['lasso_model']
     dictionary = lasso_model_artifacts['dictionary']

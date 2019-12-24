@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import sys
 
+# modelop.init
 def begin():
     global movies, model, rating_counts
     movies = pd.read_csv("/fastscore/datasets/movies.csv")
@@ -18,6 +19,7 @@ def begin():
     print("MODEL LOADED")
     sys.stdout.flush()
 
+# modelop.score
 def action(ratings):
     rows = [{"userid": 0, "movieid": int(x), "rating": ratings[x]} for x in ratings]
 

@@ -3,5 +3,6 @@
 
 import random
 
+# modelop.score
 def action(datum):
     yield datum + random.random()

@@ -7,6 +7,7 @@ import pickle
 from sklearn.linear_model import LinearRegression
 
 
+# modelop.init
 def begin():
     global lr
     global window, window_size
@@ -15,6 +16,7 @@ def begin():
     with open('lr_pickle1.pkl', 'rb') as f:
         lr = pickle.load(f)
 
+# modelop.score
 def action(x):
     global window, window_size
     x = x['Close']

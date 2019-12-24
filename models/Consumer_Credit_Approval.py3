@@ -5,6 +5,7 @@ import sys as sys
 
 from sklearn.metrics import confusion_matrix, f1_score, roc_curve, auc
 
+# modelop.init
 def begin():
     global features, model_coefs, thresh
     features = ['log_loan_amnt', 'log_int_rate', 'log_age_of_earliest_cr_line',
@@ -32,6 +33,7 @@ def begin():
         thresh = 0.6211685845208699
     pass
 
+# modelop.score
 def action(datum):
     score = sum([datum[feat] * model_coefs[feat] for feat in features])
     score += model_coefs['intercept']
@@ -41,6 +43,7 @@ def action(datum):
     if pred_proba > thresh: yield "Default"
     else: yield "Pay Off"
 
+# modelop.metrics
 def backtest(data):
     actuals = data.loan_status
     data['intercept'] = 1

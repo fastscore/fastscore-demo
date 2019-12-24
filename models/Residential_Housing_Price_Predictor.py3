@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 
 
+# modelop.init
 def begin():
     global xgb_model, means, stdevs, shap_explainer, garageyrbuilt_mean, features
 
@@ -16,6 +17,7 @@ def begin():
     pass
 
 
+# modelop.score
 def action(datum):
     standard_datum = datum
     for k in means.keys():

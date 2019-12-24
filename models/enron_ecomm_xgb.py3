@@ -26,6 +26,7 @@ def preprocess(df):
     data = pd.DataFrame(data, index = padded_vectors.index, columns = range(2**4))
     return data
 
+# modelop.init
 def begin():
     global threshold, xgb_model, ft_model
     xgb_model_artifacts = pickle.load(open('/fastscore/xgb_model_artifacts.pkl', 'rb'))
@@ -36,6 +37,7 @@ def begin():
     xgb_model.load_model('/fastscore/xgb_model.model')
     pass
 
+# modelop.score
 def action(df):
    
     cleaned = preprocess(df)
