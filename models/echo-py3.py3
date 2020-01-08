@@ -9,6 +9,12 @@ def action(datum):
 	yield(datum)
 
 
-# modelop.metrics
 def metrics(datum):
 	yield("{ \"foo\": 1 }");
+
+# modelop.metrics
+def dict_metrics(datum):
+	yield {
+		"foo": 1,
+		"bar": "test result"
+	}
