@@ -36,3 +36,31 @@ def action(datum):
     shap_values = pd.Series(shap_values, index=features)
 
     yield dict(Id = idx, xgboost_pred = prediction, shap_values=shap_values.to_dict())
+
+# modelop.metrics
+def metrics(datum):
+    yield """
+    {
+    "rmse": 0.16593233547965738,
+    "mae": 0.12163949222544038,
+    "explained_variance": 0.8337244947859745,
+    "r_squared": 0.8326815731399975,
+    "shap": {
+        "FirstFlrSF": 0.13801132708612732,
+        "SecondFlrSF": 0.02738545211258212,
+        "GarageYrBlt": 0.009966999923768783,
+        "YearBuilt": 0.12276532809950753,
+        "GarageCars": 0.07883269740135544,
+        "GarageArea": 0.25306942718400616,
+        "TotalBsmtSF": 0.10114252998063433,
+        "LotFrontage": 0.004683047129816955,
+        "LotArea": 0.03082993027062292,
+        "no_garage": 0.0,
+        "finished_garage": 0.06533796171781912,
+        "unfinished_garage": 0.0
+    }
+}
+    """
+
+
+

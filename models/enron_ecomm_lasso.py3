@@ -81,3 +81,159 @@ def action(x):
     # yield output
     yield output.to_dict(orient="records")
 
+# modelop.metrics
+def metrics(datum):
+    yield """{
+    "ROC": [
+        {
+            "fpr": 0,
+            "tpr": 0
+        },
+        {
+            "fpr": 0.0125,
+            "tpr": 0
+        },
+        {
+            "fpr": 0.0125,
+            "tpr": 0.3333333333333333
+        },
+        {
+            "fpr": 0.025,
+            "tpr": 0.3333333333333333
+        },
+        {
+            "fpr": 0.025,
+            "tpr": 0.6666666666666666
+        },
+        {
+            "fpr": 0.275,
+            "tpr": 0.6666666666666666
+        },
+        {
+            "fpr": 0.275,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.4375,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.4625,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.5,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.75,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.8125,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.8625,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.925,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.95,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.975,
+            "tpr": 1
+        },
+        {
+            "fpr": 1,
+            "tpr": 1
+        }
+    ],
+    "auc": 0.8958333333333333,
+    "f2_score": 0.625,
+    "confusion_matrix": [
+        {
+            "Compliant": 78,
+            "Non-Compliant": 2
+        },
+        {
+            "Compliant": 1,
+            "Non-Compliant": 2
+        }
+    ],
+    "shap" : {
+        "strategi": 3.2520682958749694,
+        "indic": 0.7102795675925868,
+        "net": 0.3541640953338466,
+        "research": 2.340609152949877,
+        "market": 1.6368844559196445,
+        "version": 1.9101731885557005,
+        "good": 1.3562284993616274,
+        "mail": 0.6928553560354906,
+        "bid": 2.8162293879415072,
+        "data": 3.387712516393189,
+        "report": 0.47704432407553465,
+        "greet": 2.754767300818468,
+        "said": 4.54813893155902,
+        "approach": 5.799971287318539,
+        "develop": 3.3643937399880004,
+        "law": 2.196729052019291,
+        "normal": 2.681564509767407,
+        "pocket": 1.2258033392225045,
+        "trader": 0.8864414506427811,
+        "trigger": 1.9309807702640416,
+        "label": 2.885248298256796,
+        "softwar": 1.995336285501284
+    },
+    "bias" : {
+        "attributeAudited": "Gender",
+        "referenceGroup": "Male",
+        "fairnessThreshold": "80%",
+        "fairnessMeasures": [
+            {
+                "label": "Equal Parity",
+                "result": "Failed",
+                "group": "Female",
+                "disparity": 0.75
+            },
+            {
+                "label": "Proportional Parity",
+                "result": "Passed",
+                "group": null,
+                "disparity": 1.05
+            },
+            {
+                "label": "False Positive Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 0.97
+            },
+            {
+                "label": "False Discovery Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 0.88
+            },
+            {
+                "label": "False Negative Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 1.05
+            },
+            {
+                "label": "False Omission Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 0.93
+            }
+        ]
+    }
+}
+"""
+
+

@@ -50,3 +50,129 @@ def action(df):
     output.columns = ['id', 'content', 'prediction']
     yield output
 
+# modelop.metrics
+def metrics(datum):
+    yield """
+    {
+    "ROC": [
+        {
+            "fpr": 0,
+            "tpr": 0
+        },
+        {
+            "fpr": 0,
+            "tpr": 0.3333333333333333
+        },
+        {
+            "fpr": 0.0375,
+            "tpr": 0.3333333333333333
+        },
+        {
+            "fpr": 0.0375,
+            "tpr": 0.6666666666666666
+        },
+        {
+            "fpr": 0.1875,
+            "tpr": 0.6666666666666666
+        },
+        {
+            "fpr": 0.1875,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.25,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.275,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.5375,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.5625,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.65,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.675,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.75,
+            "tpr": 1
+        },
+        {
+            "fpr": 0.9,
+            "tpr": 1
+        },
+        {
+            "fpr": 1,
+            "tpr": 1
+        }
+    ],
+    "auc": 0.9249999999999999,
+    "f2_score": 0.5263157894736842,
+    "confusion_matrix": [
+        {
+            "Compliant": 75,
+            "Non-Compliant": 5
+        },
+        {
+            "Compliant": 1,
+            "Non-Compliant": 2
+        }
+    ],
+    "shap" : {
+
+    },
+    "bias" : {
+        "attributeAudited": "Gender",
+        "referenceGroup": "Male",
+        "fairnessThreshold": "80%",
+        "fairnessMeasures": [
+            {
+                "label": "Equal Parity",
+                "result": "Failed",
+                "group": "Female",
+                "disparity": 0.67
+            },
+            {
+                "label": "Proportional Parity",
+                "result": "Passed",
+                "group": null,
+                "disparity": 1.1
+            },
+            {
+                "label": "False Positive Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 1.17
+            },
+            {
+                "label": "False Discovery Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 0.82
+            },
+            {
+                "label": "False Negative Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 1.1
+            },
+            {
+                "label": "False Omission Rate Parity",
+                "result": "Passed",
+                "group": "Female",
+                "disparity": 0.88
+            }
+        ]
+    }
+}"""
+
