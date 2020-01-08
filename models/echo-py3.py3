@@ -11,4 +11,4 @@ def action(datum):
 
 # modelop.metrics
 def metrics(datum):
-	yield("{ foo: 1 }");
+	yield("{ \"foo\": 1 }");
