@@ -2,8 +2,14 @@
 # fastscore.recordsets.1: false
 
 import pickle
-#import nltk
-#import gensim
+try:
+    import nltk
+except ImportError:
+    pass
+try:
+    import gensim
+except ImportError:
+    pass
 import functools
 import pandas as pd
 import scipy
@@ -50,8 +56,9 @@ def pad_sparse_matrix(sp_mat, length, width):
 
 
 # modelop.init
-def nullbegin():
-    pass
+def conditional_begin():
+    if 'gensim' in sys.modules:
+        begin()
 
 
 def begin():

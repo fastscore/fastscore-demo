@@ -3,11 +3,18 @@
 # fastscore.module-attached: gensim
 # fastscore.module-attached: xgboost
 
+import sys
 import pickle
-# import gensim
+try:
+    import gensim
+except ImportError:
+    pass
 import pandas as pd
 import numpy
-# import xgboost
+try:
+    import xgboost
+except ImportError:
+    pass
 
 
 def pad_vectors(list_of_vecs):
@@ -29,8 +36,9 @@ def preprocess(df):
 
 
 # modelop.init
-def nullbegin():
-    pass
+def conditional_begin():
+    if 'xgboost' in sys.modules:
+        begin()
 
 
 def begin():
