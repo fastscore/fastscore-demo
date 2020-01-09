@@ -64,8 +64,8 @@ def backtest(data):
 
 # modelop.metrics
 def metrics(data):
-    yield """{
-    "confusion_matrix": [
+	yield {
+	"confusion_matrix": [
 		{
 			"PayOff": 72,
 			"Default": 14
@@ -211,8 +211,7 @@ def metrics(data):
 		}
 	],
 	"auc": 0.6378737541528239
-}
-"""
+	}
 
 def cm_to_dict(cm, classes):
     out = []

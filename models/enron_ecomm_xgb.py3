@@ -4,11 +4,11 @@
 # fastscore.module-attached: xgboost
 
 import pickle
-import gensim
+# import gensim
 import pandas as pd
 import numpy
 import sys
-import xgboost
+# import xgboost
 
 def pad_vectors(list_of_vecs):
     for j in range(len(list_of_vecs), 2**2):
