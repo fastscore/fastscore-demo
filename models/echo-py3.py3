@@ -1,4 +1,3 @@
-# fastscore.slot.0: in-use
 import sys as sys
 
 
@@ -6,7 +5,6 @@ import sys as sys
 def action(datum):
 	sys.stdout.flush()
 	print(datum)
-	sys.stdout.flush()
 
 	yield datum
 
@@ -17,11 +15,7 @@ def metrics(datum):
 
 # modelop.metrics
 def dict_metrics(datum):
-	sys.stdout.flush()
-	print("metrics function called: " + datum)
-	sys.stdout.flush()
-
 	yield {
-		"foo": 1,
+		"foo": "fooval",
 		"bar": "test result"
 	}
