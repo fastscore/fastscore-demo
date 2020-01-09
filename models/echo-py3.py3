@@ -1,3 +1,4 @@
+# fastscore.slot.0: in-use
 import sys as sys
 
 
@@ -7,7 +8,7 @@ def action(datum):
 	print(datum)
 	sys.stdout.flush()
 
-	yield(datum)
+	yield datum
 
 
 def metrics(datum):
