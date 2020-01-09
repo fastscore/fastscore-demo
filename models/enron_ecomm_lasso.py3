@@ -4,8 +4,8 @@
 # fastscore.module-attached: gensim
 
 import pickle
-import nltk
-import gensim
+#import nltk
+#import gensim
 import functools
 import pandas as pd
 import scipy
@@ -52,10 +52,15 @@ def pad_sparse_matrix(sp_mat, length, width):
 
 
 # modelop.init
+def nullbegin():
+    pass
+
+
 def begin():
     global lasso_model_artifacts 
     lasso_model_artifacts = pickle.load(open('/fastscore/lasso_model_artifacts.pkl', 'rb'))
     pass
+
 
 # modelop.score
 def action(x):
@@ -83,7 +88,7 @@ def action(x):
 
 # modelop.metrics
 def metrics(datum):
-    yield """{
+    yield {
     "ROC": [
         {
             "fpr": 0,
@@ -232,8 +237,8 @@ def metrics(datum):
                 "disparity": 0.93
             }
         ]
+        }
     }
-}
-"""
+
 
 

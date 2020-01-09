@@ -15,8 +15,8 @@ def metrics(datum):
 
 # modelop.metrics
 def dict_metrics(datum):
-	yield [{
+	yield {
 		"foo": 1,
 		"bar": "test result"
-	}]
+	}
 
