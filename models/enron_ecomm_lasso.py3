@@ -1,7 +1,5 @@
 # fastscore.recordsets.0: true
 # fastscore.recordsets.1: false
-# fastscore.module-attached: nltk
-# fastscore.module-attached: gensim
 
 import pickle
 #import nltk
