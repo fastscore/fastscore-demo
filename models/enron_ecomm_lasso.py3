@@ -207,7 +207,7 @@ def metrics(datum):
             {
                 "label": "Proportional Parity",
                 "result": "Passed",
-                "group": null,
+                "group": None,
                 "disparity": 1.05
             },
             {
