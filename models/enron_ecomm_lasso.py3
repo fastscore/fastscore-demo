@@ -91,6 +91,7 @@ def action(x):
     # yield output
     yield output.to_dict(orient="records")
 
+
 # modelop.metrics
 def metrics(datum):
     yield {

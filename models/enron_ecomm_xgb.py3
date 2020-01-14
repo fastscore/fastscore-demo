@@ -187,7 +187,7 @@ def metrics(datum):
                 "disparity": 0.88
             }
         ]
-    }
+        }
     }
 
 
