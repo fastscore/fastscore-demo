@@ -1,8 +1,12 @@
-# fastscore.schema.0: array-double
-# fastscore.schema.1: array-double
-# fastscore.schema.3: array-double
 
 # modelop.score
-def action(datum):
-    yield (1, datum)
-    yield (3, datum)
+def action(x):
+	if x['DAClaimRequestPayload']['EventName'] == "RentersThirdPartyLiability":
+		print("RentersThirdPartyLiability")
+		yield(x, 1)
+	elif x['DAClaimRequestPayload']['EventName'] == "HomeownersContentsOnly":
+		print("RentersThirdPartyLiability")
+		yield(x, 3)
+	else:
+		print ("Danger Mr. Robertson: EventName not found")
+		yield("error")
