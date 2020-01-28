@@ -63,7 +63,7 @@ def conditional_begin():
 
 def begin():
     global lasso_model_artifacts 
-    lasso_model_artifacts = pickle.load(open('/fastscore/lasso_model_artifacts.pkl', 'rb'))
+    lasso_model_artifacts = pickle.load(open('lasso_model_artifacts.pkl', 'rb'))
     pass
 
 
