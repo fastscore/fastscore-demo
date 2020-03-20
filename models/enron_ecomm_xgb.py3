@@ -43,12 +43,12 @@ def conditional_begin():
 
 def begin():
     global threshold, xgb_model, ft_model
-    xgb_model_artifacts = pickle.load(open('/fastscore/xgb_model_artifacts.pkl', 'rb'))
+    xgb_model_artifacts = pickle.load(open('xgb_model_artifacts.pkl', 'rb'))
     threshold = xgb_model_artifacts['threshold']
     ft_model = xgb_model_artifacts['ft_model']
 
     xgb_model = xgboost.XGBClassifier()
-    xgb_model.load_model('/fastscore/xgb_model.model')
+    xgb_model.load_model('xgb_model.model')
     pass
 
 
